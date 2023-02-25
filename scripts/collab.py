@@ -30,10 +30,5 @@ def on_ui_tabs():
                 btn_run = gr.Button("run command")
                 btn_run.click(run, inputs=command, outputs=out_text)
                 def scrollBar(self):
-                S = Scrollbar()
-                S.pack(side=RIGHT, fill=Y)
-                self.T.pack(side=LEFT, fill=Y)
-                S.config(command=self.T.yview)
-                self.T.config(yscrollcommand=S.set)
     return (ccolab, "C Colab", "ccolab"),
 script_callbacks.on_ui_tabs(on_ui_tabs)
