@@ -22,12 +22,6 @@ def on_ui_tabs():
         vae:   wget https://huggingface.co/ckpt/trinart_characters_19.2m_stable_diffusion_v1/resolve/main/autoencoder_fix_kl-f8-trinart_characters.ckpt -O /content/stable-diffusion-webui/models/VAE/autoencoder_fix_kl-f8-trinart_characters.vae.pt
         zip outputs folder: zip -r /content/outputs.zip /content/stable-diffusion-webui/outputs
         ```
-         def scrollBar(self):
-        S = Scrollbar()
-        S.pack(side=RIGHT, fill=Y)
-        self.T.pack(side=LEFT, fill=Y)
-        S.config(command=self.T.yview)
-        self.T.config(yscrollcommand=S.set)
         """)
         with gr.Group():
             with gr.Box():
@@ -35,5 +29,11 @@ def on_ui_tabs():
                 out_text = gr.Textbox(show_label=False)
                 btn_run = gr.Button("run command")
                 btn_run.click(run, inputs=command, outputs=out_text)
+                def scrollBar(self):
+                S = Scrollbar()
+                S.pack(side=RIGHT, fill=Y)
+                self.T.pack(side=LEFT, fill=Y)
+                S.config(command=self.T.yview)
+                self.T.config(yscrollcommand=S.set)
     return (ccolab, "C Colab", "ccolab"),
 script_callbacks.on_ui_tabs(on_ui_tabs)
