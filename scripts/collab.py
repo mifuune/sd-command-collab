@@ -28,7 +28,6 @@ def on_ui_tabs():
                 command = gr.Textbox(show_label=False, max_lines=1, placeholder="command")
                 out_text = gr.Textbox(show_label=False)
                 btn_run = gr.Button("run command")
-                btn_run.click(run, inputs=command, outputs=out_text)
-                def scrollBar(self):
+                btn_run.click(run, inputs=command, outputs=out_text)               
     return (ccolab, "C Colab", "ccolab"),
 script_callbacks.on_ui_tabs(on_ui_tabs)
