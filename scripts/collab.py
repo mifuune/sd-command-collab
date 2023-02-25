@@ -29,5 +29,5 @@ def on_ui_tabs():
                 out_text = gr.Textbox(show_label=False)
                 btn_run = gr.Button("run command")
                 btn_run.click(run, inputs=command, outputs=out_text)               
-    return (ccolab, "C Colab", "ccolab"),
+    return (ccolab, "Command Colab", "ccolab"),
 script_callbacks.on_ui_tabs(on_ui_tabs)
